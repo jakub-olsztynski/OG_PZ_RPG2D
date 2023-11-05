@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private BoxCollider2D boxCollider;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 }
