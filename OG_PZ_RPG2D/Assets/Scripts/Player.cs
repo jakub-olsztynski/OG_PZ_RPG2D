@@ -2,36 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+
 public class Player : MonoBehaviour
 {
     private BoxCollider2D boxCollider;
-
     private Vector3 moveDelta;
+    private RaycastHit2D hit;
 
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
     }
-    private void FixedUpdate() //vs Update, FixedUpdate registers at fixed interval so framerate wont break phsyics
+
+    private void FixedUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        moveDelta = new Vector3(x,y,0); //reset moveDelta for each frame
+        // Reset move Delta
+        moveDelta = new Vector3(x, y, 0);
 
-        Debug.Log(x); //comment this out in release!!!
-        Debug.Log(y);
+        //Swap sprite direction
+        if (moveDelta.x > 0)
+            transform.localScale = Vector3.one;
+        else if (moveDelta.x < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
 
-        if(moveDelta.x > 0)
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        if (hit.collider == null)
         {
-            transform.localScale = new Vector3(1,1,1); //flip sprite in y-axis, Vector3.one = Vector3(1,1,1)
+            //Moving
+            transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
         }
-        else if(moveDelta.x < 0)
+
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        if (hit.collider == null)
         {
-            transform.localScale = new Vector3(-1, 1, 1); //flip sprite back, (-1,0,0) makes it dissapear cause it becomes 1-dimensional
+            //Moving
+            transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
-        //actual movement goes here
-        transform.Translate(moveDelta.normalized * Time.deltaTime); //timeDelta to normalize with framerate, .normalized to get rid of excess vertical!
+
+
     }
 }
