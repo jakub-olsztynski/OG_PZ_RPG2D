@@ -341,7 +341,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0012015793, y: 0.0010668263}
+  m_Offset: {x: 0.0040606298, y: -0.0055337176}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -352,7 +352,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.099307254, y: 0.15810083}
+  m_Size: {x: 0.08878284, y: 0.14489974}
   m_EdgeRadius: 0
 --- !u!1 &104110984
 GameObject:
@@ -20946,7 +20946,7 @@ MonoBehaviour:
   m_Follow: {fileID: 67410651}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 0.96013194
+    OrthographicSize: 1
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -22451,6 +22451,7 @@ GameObject:
   - component: {fileID: 1377558931}
   - component: {fileID: 1377558930}
   - component: {fileID: 1377558929}
+  - component: {fileID: 1377558932}
   m_Layer: 9
   m_Name: TEST_NPC
   m_TagString: Untagged
@@ -22490,7 +22491,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002583772, y: 0.0010961145}
+  m_Offset: {x: -0.003876552, y: -0.003105417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22501,7 +22502,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09136656, y: 0.15894255}
+  m_Size: {x: 0.088781, y: 0.15053949}
   m_EdgeRadius: 0
 --- !u!212 &1377558930
 SpriteRenderer:
@@ -22570,6 +22571,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1377558932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377558928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c567538b1b7a60d4382c9e53060d32ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &2123661292
 GameObject:
   m_ObjectHideFlags: 0
@@ -22632,7 +22659,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.96013194
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
