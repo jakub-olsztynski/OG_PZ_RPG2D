@@ -5541,7 +5541,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_258
+      name: chest_11
       rect:
         serializedVersion: 2
         x: 224
@@ -5562,7 +5562,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_259
+      name: chest_21
       rect:
         serializedVersion: 2
         x: 240
@@ -5877,7 +5877,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_274
+      name: chest_12
       rect:
         serializedVersion: 2
         x: 224
@@ -5898,7 +5898,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_275
+      name: chest_22
       rect:
         serializedVersion: 2
         x: 240
@@ -6192,7 +6192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_289
+      name: chest_13
       rect:
         serializedVersion: 2
         x: 224
@@ -6213,7 +6213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_290
+      name: chest_23
       rect:
         serializedVersion: 2
         x: 240
@@ -6925,8 +6925,6 @@ TextureImporter:
       Atlas_255: 473921589
       Atlas_256: -23874913
       Atlas_257: 578997917
-      Atlas_258: 1395222455
-      Atlas_259: 1408572552
       Atlas_26: 704302679
       Atlas_260: 1970257122
       Atlas_261: 199443140
@@ -6943,8 +6941,6 @@ TextureImporter:
       Atlas_271: 176269015
       Atlas_272: -708221516
       Atlas_273: -278040582
-      Atlas_274: 662853411
-      Atlas_275: -333844070
       Atlas_276: -2012803685
       Atlas_277: -1124997563
       Atlas_278: 2067367396
@@ -6959,9 +6955,7 @@ TextureImporter:
       Atlas_286: 348451921
       Atlas_287: 973622934
       Atlas_288: 1819537316
-      Atlas_289: -684089446
       Atlas_29: -832254676
-      Atlas_290: -385309453
       Atlas_291: -1108750500
       Atlas_292: -782767046
       Atlas_293: 1118590764
@@ -7061,6 +7055,12 @@ TextureImporter:
       Atlas_97: 158482972
       Atlas_98: 392046761
       Atlas_99: 1434899230
+      chest_11: 1395222455
+      chest_12: 662853411
+      chest_13: -684089446
+      chest_21: 1408572552
+      chest_22: -333844070
+      chest_23: -385309453
       player_0: 22792133
       player_1: 980956550
   mipmapLimitGroupName: 
