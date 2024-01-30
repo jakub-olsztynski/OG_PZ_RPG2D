@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectable : Collidable
 {
-    protected bool collected;
+    protected bool collected; //protected zeby obiekty klas dziedziczacych nadal mialy dostep
 
     protected override void OnCollide(Collider2D coll)
     {

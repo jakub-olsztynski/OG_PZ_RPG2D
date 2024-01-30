@@ -354,13 +354,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_9
+      name: weapon_0
       rect:
         serializedVersion: 2
-        x: 144
-        y: 240
-        width: 16
-        height: 16
+        x: 147
+        y: 225
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,13 +375,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_10
+      name: weapon_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 240
-        width: 16
-        height: 16
+        x: 163
+        y: 225
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,13 +396,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_11
+      name: weapon_2
       rect:
         serializedVersion: 2
-        x: 176
-        y: 240
-        width: 16
-        height: 16
+        x: 179
+        y: 225
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,13 +417,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_12
+      name: weapon_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 240
-        width: 16
-        height: 16
+        x: 195
+        y: 225
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,13 +438,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_13
+      name: weapon_4
       rect:
         serializedVersion: 2
-        x: 208
-        y: 240
-        width: 16
-        height: 16
+        x: 211
+        y: 225
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,13 +459,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_14
+      name: weapon_5
       rect:
         serializedVersion: 2
-        x: 224
-        y: 240
-        width: 16
-        height: 16
+        x: 228
+        y: 225
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4638,7 +4638,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_215
+      name: enemy_1
       rect:
         serializedVersion: 2
         x: 16
@@ -6750,7 +6750,6 @@ TextureImporter:
     nameFileIdTable:
       Atlas_0: 2063005422
       Atlas_1: -1837871631
-      Atlas_10: 87807337
       Atlas_100: 280569887
       Atlas_101: -343121902
       Atlas_102: 1950700148
@@ -6761,7 +6760,6 @@ TextureImporter:
       Atlas_107: 1994203625
       Atlas_108: -1871150766
       Atlas_109: 1234970363
-      Atlas_11: 122331512
       Atlas_110: -215362751
       Atlas_111: -1624212241
       Atlas_112: 1785611834
@@ -6772,7 +6770,6 @@ TextureImporter:
       Atlas_117: 1362197003
       Atlas_118: -373126153
       Atlas_119: -2023360406
-      Atlas_12: 186035515
       Atlas_120: 2019542574
       Atlas_121: 1053407752
       Atlas_122: 675921449
@@ -6783,7 +6780,6 @@ TextureImporter:
       Atlas_127: -53022399
       Atlas_128: 1463561205
       Atlas_129: 1700409438
-      Atlas_13: 890935656
       Atlas_130: -1104406790
       Atlas_131: -770962655
       Atlas_132: 1700123379
@@ -6794,7 +6790,6 @@ TextureImporter:
       Atlas_137: 906084105
       Atlas_138: -685421603
       Atlas_139: -1447358961
-      Atlas_14: 1895709858
       Atlas_140: 87023889
       Atlas_141: -1705129307
       Atlas_142: 939307333
@@ -6878,7 +6873,6 @@ TextureImporter:
       Atlas_212: 63808834
       Atlas_213: -112445576
       Atlas_214: 1753169085
-      Atlas_215: -449073613
       Atlas_216: -101605427
       Atlas_217: -1885426429
       Atlas_218: -1496138712
@@ -7044,7 +7038,6 @@ TextureImporter:
       Atlas_87: 1214795903
       Atlas_88: -2140066077
       Atlas_89: 1732986761
-      Atlas_9: 1876583494
       Atlas_90: -539328241
       Atlas_91: -692325777
       Atlas_92: -1519002029
@@ -7061,8 +7054,15 @@ TextureImporter:
       chest_21: 1408572552
       chest_22: -333844070
       chest_23: -385309453
+      enemy_1: -449073613
       player_0: 22792133
       player_1: 980956550
+      weapon_0: 1876583494
+      weapon_1: 87807337
+      weapon_2: 122331512
+      weapon_3: 186035515
+      weapon_4: 890935656
+      weapon_5: 1895709858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

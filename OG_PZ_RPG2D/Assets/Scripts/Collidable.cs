@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//[RequireComponent(typeof(BoxCollider2D))] //nie wstawiaj tego redznie
 public class Collidable : MonoBehaviour
 {
     public ContactFilter2D filter;
@@ -14,6 +15,7 @@ public class Collidable : MonoBehaviour
     }
 
     protected virtual void Update()
+        //tu sie dzieje magia kolizji
     {
         boxCollider.OverlapCollider(filter,hits);
         for(int i =0; i < hits.Length; i++)
@@ -24,13 +26,13 @@ public class Collidable : MonoBehaviour
             }
             OnCollide(hits[i]);
 
-            hits[i] = null;
+            hits[i] = null; //czyszczenie arraya kolizji
         }
     }
 
     protected virtual void OnCollide(Collider2D coll)
     {
-        Debug.Log(coll.name);
+        Debug.Log("OnCollide TODO (brak implementacji) " + this.name); //dziedziczenie z OnCollide, przekazanie nazwy(typu)obiektu
     }
 
 }
