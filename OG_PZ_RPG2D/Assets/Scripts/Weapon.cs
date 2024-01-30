@@ -49,6 +49,15 @@ public class Weapon : Collidable
             {
                 return;
             }
+            //start logiki przekazania obiektu damage
+            Damage dmg = new Damage()
+            {
+                damageAmount = damagePoint,
+                origin = transform.position, //wiadomo, ty
+                pushForce = pushForce //mo¿e zmieñiæ nazwe tego pola tutaj albo w klasie Damage
+            };
+            coll.SendMessage("RecieveDamage", dmg); //obiekt dmg przekazywany metoda RecieveDamage
+            //koniec logiki przekazania obiektu damage
             Debug.Log(coll.name);
         }
         
