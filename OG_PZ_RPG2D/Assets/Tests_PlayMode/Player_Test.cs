@@ -8,9 +8,15 @@ public class PlayerTests
     [Test]
     public void CalculatesNewPosition()
     {
-        Player player = new Player();
-        Assert.AreEqual(new Vector3(0,0,0),player.GetNewPosition(5,5), "Scale should be Vector3.one when moving right");
+        GameObject gameObject = new GameObject();
+        //Collidable collidable = gameObject.AddComponent<Collidable>();
+        // Player player = new Player();
+        Player player = gameObject.AddComponent<Player>();
+        BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
+        //boxCollider = GetComponent<BoxCollider2D>();
+        Assert.AreEqual(new Vector3(314,157,0),player.GetNewPosition(new Vector3(100,50,0),collider,(float)3.14), "Scale should be Vector3.one when moving right");
     }
+
     /*public void Player_FixedUpdate_MoveRight_ScaleIsOne()
     {
         // Arrange

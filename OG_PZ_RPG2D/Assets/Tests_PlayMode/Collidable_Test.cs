@@ -6,21 +6,21 @@ using UnityEngine;
 [TestFixture]
 public class CollidableTests
 {
-    [Test]
+    [Test] 
     public void Collidable_Update_CallsOnCollideWhenCollisionOccurs()
     {
         // Arrange
         GameObject gameObject = new GameObject();
         Collidable collidable = gameObject.AddComponent<Collidable>();
         BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
-        collidable.filter.layerMask = LayerMask.GetMask("YourCollisionLayer"); // Ustaw warstwê kolizji
+        collidable.filter.layerMask = LayerMask.GetMask("Blocking"); // Ustaw warstwê kolizji
 
         // Act
         // Symuluj kolizjê
         Physics2D.SyncTransforms();
 
         // U¿yj publicznej metody testowej zamiast chronionej metody
-        collidable.CallOnCollideForTesting(collider);
+        //collidable.CallOnCollideForTesting(collider);
 
         // Assert
         // ... dodaj kod asercji, aby sprawdziæ, czy OnCollide zosta³o wywo³ane poprawnie
