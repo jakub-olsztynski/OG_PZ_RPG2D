@@ -242,6 +242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5a342bf34b9524680d7adbf8b6c9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitpoint: 10
+  maxHitpoint: 10
+  pushRecoverySpeed: 0.2
+  immuneTime: 1
+  lastImmune: 0
 --- !u!212 &67410650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23151,9 +23156,9 @@ GameObject:
   - component: {fileID: 1486724928}
   - component: {fileID: 1486724927}
   - component: {fileID: 1486724926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: enemy_1
-  m_TagString: Untagged
+  m_TagString: Fighter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

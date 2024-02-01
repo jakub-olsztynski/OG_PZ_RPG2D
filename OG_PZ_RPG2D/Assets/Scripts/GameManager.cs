@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private void Awake()
     {
+        //tutaj przykladowa metoda polaczenia z DB
         if(GameManager.instance != null) //zapobiega EWENTUALNEJ (jakims cudem) duplikacji GM. Jedyny sposob zeby zduplikowac to zaladowac dwa razy MainScene
         {
             Debug.Log("EmergencyDestroyManager");
@@ -33,9 +34,9 @@ public class GameManager : MonoBehaviour
 
     //obs³uga FloatingText
     public FloatingTextManager floatingText;
-    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration) //do FloatingText ofc //<int fontSize, Color color> wykomentowane
+    public void ShowText(string msg, Vector3 position, Vector3 motion, float duration) //do FloatingText ofc //<int fontSize, Color color> wykomentowane
     {
-        floatingText.Show(msg, fontSize, color, position, motion, duration);
+        floatingText.Show(msg, position, motion, duration); //by³o (msg, fontSize, color, position, motion, duration);
     }
 
     //Scene s;//LEPIEJ TO USUN
