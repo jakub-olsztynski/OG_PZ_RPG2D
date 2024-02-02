@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Player : Mover //Player : Mover : Fighter : MonoBehaviour
+public abstract class Mover : Fighter //abstract zeby to sie nie znalaz³o na zadnym obiekcie, Mover istnieje tylko jako rozszerzaj¹ca obs³uga logiki klas dziedziczacych.
 {
-    private void FixedUpdate()
-    {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+    protected BoxCollider2D boxCollider;
+    protected Vector3 moveDelta;
+    protected RaycastHit2D hit;
+    protected float ySpeed = 0.75f;
+    protected float xSpeed = 1.0f;
 
-        UpdateMotor(new Vector3(x, y, 0));
-    }
-
-    /* Poni¿ej stara logika, deprecjonowana po wprowadzeniu dziedziczenia z Mover
-    private void Start()
+    protected virtual void Start() //protected zeby uniknac override gdziekolwiek
     {
         boxCollider = GetComponent<BoxCollider2D>();
     }
-
+    /*
     private void FixedUpdate()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-
+    }
+    */
+    protected virtual void UpdateMotor(Vector3 input)
+    {
         // Reset move Delta
-        moveDelta = new Vector3(x, y, 0);
+        //moveDelta = input; //to samo co player ale nie input z klawisza a input z funkcji. Reszta funkcji bez zmian //DEPRECIJONOWANE, PATRZ ZMIANA LINIJKA PONIZEJ
+        moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0); //nowa logika pozwalajaca przypisywac rozne x i y speed
 
         //Swap sprite direction
         if (moveDelta.x > 0)
@@ -47,7 +47,5 @@ public class Player : Mover //Player : Mover : Fighter : MonoBehaviour
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
         //Warto zwróciæ uwagê ¿e obecnie wg kodu gracz ma kolizjê z samym sob¹ daltego aby tego unik¹æ prze³aczyæ trzeba opcjê: Edit>ProjectSettings>Physics2D>Queries Start in Collider
-        
     }
-    */ //koniec deprecjonowanej logiki
 }
